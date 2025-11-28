@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Emotune API Collection",
+    "description": "Collection of API endpoints for Emotune emotion detection and music recommendation system",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Detect Emotion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"image\": \"data:image/jpeg;base64,YOUR_BASE64_IMAGE_STRING_HERE\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/detect-emotion",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["detect-emotion"]
+        }
+      }
+    },
+    {
+      "name": "Get Recommendations - Happy",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/get-recommendations/Happy",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["get-recommendations", "Happy"]
+        }
+      }
+    },
+    {
+      "name": "Get Recommendations - Sad",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/get-recommendations/Sad",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["get-recommendations", "Sad"]
+        }
+      }
+    },
+    {
+      "name": "Get Recommendations - Angry",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/get-recommendations/Angry",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["get-recommendations", "Angry"]
+        }
+      }
+    }
+  ]
+}
